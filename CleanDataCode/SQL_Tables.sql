@@ -77,9 +77,7 @@ create table train (
 	SaleType varchar(5) not null,
 	SaleCondition varchar(8) not null,
 	SalePrice int not null
-)
-
-Select * from train
+);
 
 create table test(
 	Id int not null,
@@ -159,6 +157,41 @@ create table test(
 	YrSold int not null,
 	SaleType varchar(5) not null,
 	SaleCondition varchar(8) not null
-)
+);
 
-Select * from test
+CREATE TABLE shortTrain (
+	MSSubClass int not null,
+	LotFrontage DECIMAL(6,2) not null,
+	LotArea int,
+	Neighborhood varchar(8) not null,
+	HouseStyle varchar(7) not null,
+	OverallQual int not null,
+	OverallCond int not null,
+	YearBuilt int not null,
+	Exterior1st varchar(10) not null,
+	Exterior2nd varchar(10) not null,
+	MasVnrType varchar(8) not null,
+	MasVnrArea DECIMAL(6,2) not null,
+	Foundation varchar(6) not null,
+	BsmtQual varchar(4) not null,
+	BsmtFinType1 varchar(3) not null,
+	TotalBsmtSF int not null,
+	HeatingQC varchar(2) not null,
+	GrLivArea int not null,
+	BsmtFullBath int not null,
+	FullBath int not null,
+	BedroomAbvGr int not null,
+	KitchenQual varchar(2) not null,
+	TotRmsAbvGrd int not null,
+	Fireplaces int not null,
+	FireplaceQu varchar(5) not null,
+	GarageType varchar(8) not null,
+	GarageFinish varchar(4) not null,
+	GarageCars int not null,
+	GarageArea int not null,
+	MoSold int not null,
+	YrSold int not null,
+	SalePrice int not null,
+	outdoorAreaSF int not null
+);
+
