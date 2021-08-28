@@ -1,1 +1,1 @@
-# flask-example2
+# Flask skeleton for our project
