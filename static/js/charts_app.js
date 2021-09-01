@@ -328,7 +328,7 @@ d3.select("#option5")
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
 				))		
-		d3.csv("../../Resources/samples.csv", function(data){
+		d3.csv("../../Resources/train_allvalues.csv", function(data){
 			console.log(data)
 			for (var x in data){
 				mediansobject.Neighborhood.push(data[x].Neighborhood)
