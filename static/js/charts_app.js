@@ -21,7 +21,7 @@ mediansobject = {
 	MSZoning: []
 }
 //read csv
-d3.csv("../../samples.csv", function(data){
+d3.csv("../../Resources/train_allvalues.csv", function(data){
 	console.log(data)
 	for (var x in data){
 		mediansobject.Neighborhood.push(data[x].Neighborhood)
@@ -66,12 +66,12 @@ d3.csv("../../samples.csv", function(data){
 d3.select("#option1")
 	.on("click", function() {
 		d3.select("#responsivep").text("No Legend")
-		fetch("../text/N_writeup.txt")
+		fetch("../../Resources/N_writeup.txt")
 		.then(response => response.text())
 		.then((writeup) =>d3.select("#textreaderp").text(
 			writeup
 			))		
-		d3.csv("../../samples.csv", function(data){
+		d3.csv("../../Resources/samples.csv", function(data){
 			console.log(data)
 			for (var x in data){
 				mediansobject.Neighborhood.push(data[x].Neighborhood)
@@ -114,14 +114,14 @@ d3.select("#option1")
 });
 d3.select("#option2")
 	.on("click", function() {
-			fetch("../text/Z_writeup.txt")
+			fetch("../../Resources/Z_writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
 				))		
 		d3.select("#responsivep").text(
 			"Legend: \n \n C: Commercial \n FV: Floating Village (Retirement Community) \n RH: Residential High Density \n RL: Residential Low Density \n RM: Residential Medium Density")
-		d3.csv("../../samples.csv", function(data){
+		d3.csv("../../Resources/samples.csv", function(data){
 			console.log(data)
 			for (var x in data){
 				mediansobject.Neighborhood.push(data[x].Neighborhood)
@@ -165,7 +165,7 @@ d3.select("#option2")
 });
 d3.select("#option3")
 	.on("click", function() {
-		fetch("../text/S_writeup.txt")
+		fetch("../../Resources/S_writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
@@ -173,7 +173,7 @@ d3.select("#option3")
 		d3.select("#responsivep").text(
 			"Legend: \n \n WD: Warranty Deed - Conventional \nCWD: Warranty Deed - Cash \nNew: Home just constructed and sold \nCOD: Court Officer Deed/Estate \nCon: Contract 15% Down payment regular terms \nConLw: Contract Low Down payment and low interest \nConLI: Contract Low Interest \nConLD: Contract Low Down \nOth: Other"
 		)
-		d3.csv("../../samples.csv", function(data){
+		d3.csv("../../Resources/samples.csv", function(data){
 			console.log(data)
 			for (var x in data){
 				mediansobject.Neighborhood.push(data[x].Neighborhood)
@@ -216,7 +216,7 @@ d3.select("#option3")
 });
 d3.select("#option4")
 	.on("click", function() {
-	fetch("../text/Z_writeup.txt")
+	fetch("../../Resources/Z_writeup.txt")
 	.then(response => response.text())
 	.then((writeup) =>d3.select("#textreaderp").text(
 		writeup
@@ -225,7 +225,7 @@ d3.select("#option4")
 			"Legend: \n \nInside: Inside lot \n Corner: Corner Lot \nCulDSac: Cul-de-Sac \nFR2: Frontage on 2 sides \nFR3: Frontage on 3 sides" 
 		)
 
-		d3.csv("../../samples.csv", function(data){
+		d3.csv("../../Resources/samples.csv", function(data){
 			console.log(data)
 			for (var x in data){
 				mediansobject.Neighborhood.push(data[x].Neighborhood)
@@ -274,12 +274,12 @@ d3.select("#option4")
 		d3.select("#responsivep").text(
 			"Legend: \n \nInside: Inside lot \n Corner: Corner Lot \nCulDSac: Cul-de-Sac \nFR2: Frontage on 2 sides \nFR3: Frontage on 3 sides" 
 		)
-		fetch("../text/L_writeup.txt")
+		fetch("../../Resources/L_writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
 				))		
-		d3.csv("../../samples.csv", function(data){
+		d3.csv("../../Resources/samples.csv", function(data){
 			console.log(data)
 			for (var x in data){
 				mediansobject.Neighborhood.push(data[x].Neighborhood)
@@ -323,12 +323,12 @@ d3.select("#option4")
 d3.select("#option5")
 	.on("click", function() {
 		d3.select("#responsivep").text("No Legend")
-		fetch("../text/AvP_writeup.txt")
+		fetch("../../Resources/AvP_writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
 				))		
-		d3.csv("../../samples.csv", function(data){
+		d3.csv("../../Resources/samples.csv", function(data){
 			console.log(data)
 			for (var x in data){
 				mediansobject.Neighborhood.push(data[x].Neighborhood)
