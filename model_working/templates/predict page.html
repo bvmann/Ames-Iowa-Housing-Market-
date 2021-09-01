@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>price predict</title>
+
+</head>
+
+
+<form action="{{ url_for('predict')}}" method="POST">
+    <label for="Yrblt">Year Built:</label><br>
+    <input type="number" id="Yrblt" name="Yrblt"><br>
+    <label for="Brms">Full Bathrooms:</label><br>
+    <input type="number" id="Brms" name="Brms"><br>
+    <label for="Bedrms">Rooms (excluding bathrooms):</label><br>
+    <input type="number" id="Bedrms" name="Bedrms"><br>
+    <label for="Grlive">Above grade (ground) living area square feet:</label><br>
+    <input type="number" id="Grlive" name= "Grlive"><br>
+    <label for="Bsmt">Total square feet of basement area:</label><br>
+    <input type="number" id="Bsmt" name= "Bsmt"><br>
+    <label for="car">Size of garage in car capacity</label><br>
+    <input type="number" id="car" name= "car"><br>
+    <label for="Grg">Size of garage in square feet</label><br>
+    <input type="number" id="Grg" name= "Grg"><br>
+    <label for="Lot">Lot size in square feet</label><br>
+    <input type="number" id="lot" name= "lot"><br>
+    <input type="submit" value="Submit">
+    <input type="reset"><br>
+  </form>
+
+  
+
+  
