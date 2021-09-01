@@ -1,0 +1,14 @@
+body {
+    background-color: lightblue;
+}
+
+#responsivep {
+    background-color: rgb(226, 215, 215, 0.5);
+    text-align: center;
+    font-weight: bold;
+}
+
+#textreaderp{
+    background-color: rgb(226, 215, 215, 0.5);
+    font-style: italic;
+}
