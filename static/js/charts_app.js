@@ -21,7 +21,7 @@ mediansobject = {
 	MSZoning: []
 }
 //read csv
-d3.csv("train_allvalues.csv", function(data){
+d3.csv("static/js/train_allvalues.csv", function(data){
 	console.log(data)
 	for (var x in data){
 		mediansobject.Neighborhood.push(data[x].Neighborhood)
