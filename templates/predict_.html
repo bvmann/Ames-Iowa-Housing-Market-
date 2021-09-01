@@ -1,82 +1,112 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-us">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>price predict</title>
+  <meta charset="UTF-8">
+  <title>House Price Prediction Page</title>
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin="" />
+  <!-- Our CSS  -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
 
 </head>
+
 <body>
-    <div class= 'login'>
+  <div class="container">
+    <div>
+      <h2>
+        <center>House Price Predictor</center>
+      </h2>
+      <br>
+      <center><a href="/">return to the home page</a></center>
+      <br>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
 
+      </div>
+      <div class="col-md-8">
         <form action="{{ url_for('predict')}}" method="POST">
-            <label for="Yrblt">Year Built:</label><br>
-            <input type="number" id="Yrblt" name="Yrblt"Placeholder=1970 required ="required"><br>
-            <label for="Brms">Full Bathrooms:</label><br>
-            <input type="number" id="Brms" name="Brms" Placeholder=1 required ="required"><br>
-            <label for="Bedrms">Rooms (excluding bathrooms):</label><br>
-            <input type="number" id="Bedrms" name="Bedrms" Placeholder=2 required ="required"><br>
-            <label for="Grlive">Above grade (ground) living area square feet:</label><br>
-            <input type="number" id="Grlive" name= "Grlive" Placeholder=1500 required ="required"><br>
-            <label for="Bsmt">Total square feet of basement area:</label><br>
-            <input type="number" id="Bsmt" name= "Bsmt" Placeholder=0 required ="required"><br>
-            <label for="car">Size of garage in car capacity</label><br>
-            <input type="number" id="car" name= "car" Placeholder=1 required ="required"><br>
-            <label for="Grg">Size of garage in square feet</label><br>
-            <input type="number" id="Grg" name= "Grg" Placeholder=400 required ="required"><br>
-            <label for="Lot">Lot size in square feet</label><br>
-            <input type="number" id="lot" name= "lot" Placeholder=10500 required ="required"><br>
-            <label for="Neighborhood">pick neighborhood:</label><br>
-            <select id="Neighborhood" name="Neighborhood"Placeholder=5 required ="required"><br>
-                <option value=0>Bloomington</option>
-                <option value=1>Bluestem</option>
-                <option value=2>Briardale</option>
-                <option value=3>Brookside</option>
-                <option value=4>Clear Creek</option>
-                <option value=5>College Creek</option>
-                <option value=6>Crawford</option>
-                <option value=7>Edwards</option>
-                <option value=8>Gilbert</option>
-                <option value=9>Iowa DOT and Rail Road</option>
-                <option value=10>Meadow Village</option>
-                <option value=11>Mitchell</option>
-                <option value=12>North Ames</option>
-                <option value=13>Northridge</option>
-                <option value=14>Northpark Villa</option>
-                <option value=15>Northridge Heights</option>
-                <option value=16>Northwest Ames</option>
-                <option value=17>Old Town</option>
-                <option value=18>S&W of ISU</option>
-                <option value=19>Sawyer</option>
-                <option value=20>Sawyer West</option>
-                <option value=21>Somerset</option>
-                <option value=22>Stone Brook</option>
-                <option value=23>Timberland</option>
-                <option value=24>Veenker</option>
-                </select><br>
-            <label for="quality">Overall quality of materials and finish of the house:</label><br>
-            <select id="quality" name="quality" Placeholder=5 required ="required"><br>
-                <option value=10>Highest Quality</option>
-                <option value=9>Excellent</option>
-                <option value=8>Very Good</option>
-                <option value=7>Good</option>
-                <option value=6>Above Average</option>
-                <option value=5>Average</option>
-                <option value=4>Below Average</option>
-                <option value=3>Fair</option>
-                <option value=2>Poor</option>
-                <option value=1>Very Poor</option>
-                </select><br>
-            <button type="submit">Predict</button>
-            
-        </form>
-        
-    {{pred}}
-  </body>
-  </html>
+          <label for="Yrblt">Year Built:</label><br>
+          <input type="number" id="Yrblt" name="Yrblt" Placeholder=1970 required="required"><br>
+          <label for="Brms">Full Bathrooms:</label><br>
+          <input type="number" id="Brms" name="Brms" Placeholder=1 required="required"><br>
+          <label for="Bedrms">Rooms (excluding bathrooms):</label><br>
+          <input type="number" id="Bedrms" name="Bedrms" Placeholder=2 required="required"><br>
+          <label for="Grlive">Above grade (ground) living area square feet:</label><br>
+          <input type="number" id="Grlive" name="Grlive" Placeholder=1500 required="required"><br>
+          <label for="Bsmt">Total square feet of basement area:</label><br>
+          <input type="number" id="Bsmt" name="Bsmt" Placeholder=0 required="required"><br>
+          <label for="car">Size of garage in car capacity</label><br>
+          <input type="number" id="car" name="car" Placeholder=1 required="required"><br>
+          <label for="Grg">Size of garage in square feet</label><br>
+          <input type="number" id="Grg" name="Grg" Placeholder=400 required="required"><br>
+          <label for="Lot">Lot size in square feet</label><br>
+          <input type="number" id="lot" name="lot" Placeholder=10500 required="required"><br>
+          <label for="Neighborhood">pick neighborhood:</label><br>
+          <select id="Neighborhood" name="Neighborhood" Placeholder=5 required="required"><br>
+            <option value=0>Bloomington</option>
+            <option value=1>Bluestem</option>
+            <option value=2>Briardale</option>
+            <option value=3>Brookside</option>
+            <option value=4>Clear Creek</option>
+            <option value=5>College Creek</option>
+            <option value=6>Crawford</option>
+            <option value=7>Edwards</option>
+            <option value=8>Gilbert</option>
+            <option value=9>Iowa DOT and Rail Road</option>
+            <option value=10>Meadow Village</option>
+            <option value=11>Mitchell</option>
+            <option value=12>North Ames</option>
+            <option value=13>Northridge</option>
+            <option value=14>Northpark Villa</option>
+            <option value=15>Northridge Heights</option>
+            <option value=16>Northwest Ames</option>
+            <option value=17>Old Town</option>
+            <option value=18>S&W of ISU</option>
+            <option value=19>Sawyer</option>
+            <option value=20>Sawyer West</option>
+            <option value=21>Somerset</option>
+            <option value=22>Stone Brook</option>
+            <option value=23>Timberland</option>
+            <option value=24>Veenker</option>
+          </select><br>
+          <label for="quality">Overall quality of materials and finish of the house:</label><br>
+          <select id="quality" name="quality" Placeholder=5 required="required"><br>
+            <option value=10>Highest Quality</option>
+            <option value=9>Excellent</option>
+            <option value=8>Very Good</option>
+            <option value=7>Good</option>
+            <option value=6>Above Average</option>
+            <option value=5>Average</option>
+            <option value=4>Below Average</option>
+            <option value=3>Fair</option>
+            <option value=2>Poor</option>
+            <option value=1>Very Poor</option>
+          </select><br>
+          <p>&nbsp;</p>
+          <button type="submit">Predict Your Home Price</button>
 
-  
+        </form>
+        <blockquote style="border-left: 0px;">
+          {{pred}}
+        </blockquote>
+
+
+      </div>
+      <div class="col-md-2">
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
