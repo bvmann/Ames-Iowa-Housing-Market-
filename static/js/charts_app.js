@@ -66,12 +66,12 @@ d3.csv("../../Resources/samples.csv", function(data){
 d3.select("#option1")
 	.on("click", function() {
 		d3.select("#responsivep").text("No Legend")
-		fetch("../../Resources/N_writeup.txt")
+		fetch("../text/N_writeup.txt")
 		.then(response => response.text())
 		.then((writeup) =>d3.select("#textreaderp").text(
 			writeup
 			))		
-		d3.csv("../../Resources/samples.csv", function(data){
+		d3.csv("../text/samples.csv", function(data){
 			console.log(data)
 			for (var x in data){
 				mediansobject.Neighborhood.push(data[x].Neighborhood)
@@ -114,7 +114,7 @@ d3.select("#option1")
 });
 d3.select("#option2")
 	.on("click", function() {
-			fetch("../../Resources/Z_writeup.txt")
+			fetch("../text/Z_writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
@@ -165,7 +165,7 @@ d3.select("#option2")
 });
 d3.select("#option3")
 	.on("click", function() {
-		fetch("../../Resources/S_writeup.txt")
+		fetch("../text/S_writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
@@ -216,7 +216,7 @@ d3.select("#option3")
 });
 d3.select("#option4")
 	.on("click", function() {
-	fetch("../../Resources/Z_writeup.txt")
+	fetch("../text/Z_writeup.txt")
 	.then(response => response.text())
 	.then((writeup) =>d3.select("#textreaderp").text(
 		writeup
@@ -274,7 +274,7 @@ d3.select("#option4")
 		d3.select("#responsivep").text(
 			"Legend: \n \nInside: Inside lot \n Corner: Corner Lot \nCulDSac: Cul-de-Sac \nFR2: Frontage on 2 sides \nFR3: Frontage on 3 sides" 
 		)
-		fetch("../../Resources/L_writeup.txt")
+		fetch("../text/L_writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
@@ -323,7 +323,7 @@ d3.select("#option4")
 d3.select("#option5")
 	.on("click", function() {
 		d3.select("#responsivep").text("No Legend")
-		fetch("../../Resources/AvP_writeup.txt")
+		fetch("../text/AvP_writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
