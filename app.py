@@ -96,7 +96,7 @@ def home():
   return render_template("index.html")
 
 @app.route('/start')
-def home(): 
+def home2(): 
     return render_template("predict_.html")
 
 @app.route('/predict', methods = ['POST'])
