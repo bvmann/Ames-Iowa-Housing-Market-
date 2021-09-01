@@ -80,6 +80,10 @@ def predict():
    
     return render_template('predict_.html', pred = "Expected home value {}".format(prediction))
 
+@app.route("/charts")
+def chartspage():
+  return render_template("charts_index.html") 
+
 @app.route("/static1")
 def staticpage():
   return render_template("static-page.html")    
