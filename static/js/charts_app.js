@@ -66,7 +66,7 @@ d3.csv("static/js/train_allvalues.csv", function(data){
 d3.select("#option1")
 	.on("click", function() {
 		d3.select("#responsivep").text("No Legend")
-		fetch("static/js/N_writeup.txt")
+		fetch("N_writeup.txt")
 		.then(response => response.text())
 		.then((writeup) =>d3.select("#textreaderp").text(
 			writeup
