@@ -114,7 +114,7 @@ d3.select("#option1")
 });
 d3.select("#option2")
 	.on("click", function() {
-			fetch("static/js/Z_writeup.txt")
+			fetch("static/js/Z_Writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
@@ -165,7 +165,7 @@ d3.select("#option2")
 });
 d3.select("#option3")
 	.on("click", function() {
-		fetch("static/js/S_writeup.txt")
+		fetch("static/js/S_Writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
@@ -274,7 +274,7 @@ d3.select("#option4")
 		d3.select("#responsivep").text(
 			"Legend: \n \nInside: Inside lot \n Corner: Corner Lot \nCulDSac: Cul-de-Sac \nFR2: Frontage on 2 sides \nFR3: Frontage on 3 sides" 
 		)
-		fetch("static/js/L_writeup.txt")
+		fetch("static/js/L_Writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
