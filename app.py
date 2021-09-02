@@ -76,9 +76,9 @@ def predict():
     cols = pre_cols + input_cols
     data = pd.DataFrame([final], columns = cols)
 
-    prediction = model.predict(data).round() 
+    prediction = int(model.predict(data).round()[0])  
    
-    return render_template('predict_.html', pred = "Expected home value {}".format(prediction))
+    return render_template('predict_.html', pred = f"Expected home value ${'{:,}'.format(prediction)}")
 
 @app.route("/charts")
 def chartspage():
