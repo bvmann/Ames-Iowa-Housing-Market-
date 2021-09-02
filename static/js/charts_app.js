@@ -114,7 +114,7 @@ d3.select("#option1")
 });
 d3.select("#option2")
 	.on("click", function() {
-			fetch("../text/Z_writeup.txt")
+			fetch("static/js/Z_writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
@@ -165,7 +165,7 @@ d3.select("#option2")
 });
 d3.select("#option3")
 	.on("click", function() {
-		fetch("../text/S_writeup.txt")
+		fetch("static/js/S_writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
@@ -214,67 +214,67 @@ d3.select("#option3")
 				Plotly.newPlot('bar', SaleTypeTrace, layout);
 		});			
 });
+// d3.select("#option4")
+// 	.on("click", function() {
+// 	fetch"static/js/L_writeup.txt")
+// 	.then(response => response.text())
+// 	.then((writeup) =>d3.select("#textreaderp").text(
+// 		writeup
+// 		))		
+// 		d3.select("#responsivep").text(
+// 			"Legend: \n \nInside: Inside lot \n Corner: Corner Lot \nCulDSac: Cul-de-Sac \nFR2: Frontage on 2 sides \nFR3: Frontage on 3 sides" 
+// 		)
+
+// 		d3.csv("train_allvalues.csv", function(data){
+// 			console.log(data)
+// 			for (var x in data){
+// 				mediansobject.Neighborhood.push(data[x].Neighborhood)
+// 				mediansobject.SalePrice.push(data[x].SalePrice)
+// 				mediansobject.SaleType.push(data[x].SaleType)
+// 				mediansobject.LotConfig.push(data[x].LotConfig)
+// 				mediansobject.LotArea.push(data[x].LotArea)
+// 				mediansobject.MSZoning.push(data[x].MSZoning)
+// 			}
+// 			var LotConfigTrace = [{
+// 				type: 'bar',
+// 				x: mediansobject.LotConfig,
+// 				y: mediansobject.SalePrice,
+// 				mode: 'markers',
+// 				transforms: [{
+// 					type: 'aggregate',
+// 					groups: mediansobject.LotConfig,
+// 					aggregations: [
+// 					  {target: 'y', func: 'median', enabled: true},
+// 					]
+// 				  }]
+// 				}]
+// 				var layout = {
+// 				barmode: 'stack',
+
+// 				title: {
+// 				text: 'Median Prices by Lot Type'
+// 			},
+// 			xaxis: {
+// 				title: {
+// 					text: 'Zone Types'
+// 				}
+// 			},
+// 			yaxis: {
+// 				title: {
+// 					text: "Price"
+// 				}
+// 			}
+// 		};
+// 		Plotly.newPlot('bar', MSZoningTrace, layout);
+// 				Plotly.newPlot('bar', LotConfigTrace);
+// 		});			
+// });
 d3.select("#option4")
 	.on("click", function() {
-	fetch("../text/Z_writeup.txt")
-	.then(response => response.text())
-	.then((writeup) =>d3.select("#textreaderp").text(
-		writeup
-		))		
 		d3.select("#responsivep").text(
 			"Legend: \n \nInside: Inside lot \n Corner: Corner Lot \nCulDSac: Cul-de-Sac \nFR2: Frontage on 2 sides \nFR3: Frontage on 3 sides" 
 		)
-
-		d3.csv("train_allvalues.csv", function(data){
-			console.log(data)
-			for (var x in data){
-				mediansobject.Neighborhood.push(data[x].Neighborhood)
-				mediansobject.SalePrice.push(data[x].SalePrice)
-				mediansobject.SaleType.push(data[x].SaleType)
-				mediansobject.LotConfig.push(data[x].LotConfig)
-				mediansobject.LotArea.push(data[x].LotArea)
-				mediansobject.MSZoning.push(data[x].MSZoning)
-			}
-			var LotConfigTrace = [{
-				type: 'bar',
-				x: mediansobject.LotConfig,
-				y: mediansobject.SalePrice,
-				mode: 'markers',
-				transforms: [{
-					type: 'aggregate',
-					groups: mediansobject.LotConfig,
-					aggregations: [
-					  {target: 'y', func: 'median', enabled: true},
-					]
-				  }]
-				}]
-				var layout = {
-				barmode: 'stack',
-
-				title: {
-				text: 'Median Prices by Zone'
-			},
-			xaxis: {
-				title: {
-					text: 'Zone Types'
-				}
-			},
-			yaxis: {
-				title: {
-					text: "Price"
-				}
-			}
-		};
-		Plotly.newPlot('bar', MSZoningTrace, layout);
-				Plotly.newPlot('bar', LotConfigTrace);
-		});			
-});
-d3.select("#option4")
-	.on("click", function() {
-		d3.select("#responsivep").text(
-			"Legend: \n \nInside: Inside lot \n Corner: Corner Lot \nCulDSac: Cul-de-Sac \nFR2: Frontage on 2 sides \nFR3: Frontage on 3 sides" 
-		)
-		fetch("../text/L_writeup.txt")
+		fetch("static/js/L_writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
@@ -323,7 +323,7 @@ d3.select("#option4")
 d3.select("#option5")
 	.on("click", function() {
 		d3.select("#responsivep").text("No Legend")
-		fetch("../text/AvP_writeup.txt")
+		fetch("static/js/AvP_writeup.txt")
 			.then(response => response.text())
 			.then((writeup) =>d3.select("#textreaderp").text(
 				writeup
