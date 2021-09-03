@@ -3,10 +3,18 @@ Through some exploration, self-learning and trial and error, I saved a Random Fo
 Our original dataset contained over 70 features. Through combining and dropping columns we proceeded with a dataset of 33 columns. After trying out a KNN regressor model and Random Forest Regressor model, I settled on the Random Forest Regressor. Before running the model, I label encoded all non-numeric columns and dropped the month sold and year sold column, as we won’t know these values when we ask for a prediction. I then performed hyper-parameter tuning with GridSearchCV from sklearn, focusing on the n_estimators parameter. Using my optimal parameter setting, I fit the model and produced some predictions which I evaluated against the actual values, I also looked at the most important features. 
 My model scored around 84% 
 You can view the notebook where I did this work at: model_working/RF_ModelEval_Save.ipynb 
+
+Note: I attempted encoding and modeling with two different data sets. My first round incorporated many more columns than my second. 
+
+1st round : feature_engineer, RF_big, RF_KNN 
+2nd round : feature_preprocessing, pipeline_models_33columns, RF _ModelEval_Save
  
 Predictor: 
 Drawing from the top features I decided to allow the user to input their own values for each of these features. To make up for the other 21 features the model was trained on, I took the mode for each of the columns. Together with pre-existing data and user inputted data, we then predict using our model and present a possible sale price for this home. 
+
 The predictor was tested on a flask app under the file app.py, the html file is templates/index.html, the hardcoded values and feature name lookup code is the file titled predictxHC  
+
+
 Somethings to Change: 
 Do a longer and more in-depth look into data, maybe dropping more rows. 
 Options to change form 1. Include all 33 features for user input 2. Instead of mode for all columns, some columns use avg. 3. Explore other machine learning techniques, such as a deep learning model 
