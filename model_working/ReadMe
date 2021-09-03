@@ -6,7 +6,7 @@ You can view the notebook where I did this work at: model_working/RF_ModelEval_S
  
 Predictor: 
 Drawing from the top features I decided to allow the user to input their own values for each of these features. To make up for the other 21 features the model was trained on, I took the mode for each of the columns. Together with pre-existing data and user inputted data, we then predict using our model and present a possible sale price for this home. 
-
+The predictor was tested on a flask app under the file app.py, the html file is templates/index.html 
 Somethings to Change: 
 Do a longer and more in-depth look into data, maybe dropping more rows. 
 Options to change form 1. Include all 33 features for user input 2. Instead of mode for all columns, some columns use avg. 3. Explore other machine learning techniques, such as a deep learning model 
