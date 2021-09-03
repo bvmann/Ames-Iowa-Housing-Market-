@@ -8,7 +8,10 @@ We have deployed this Heroku app to create a website which gives statistics on h
 
 Sales data is broken down on the Charts page by zoning, neighborhood and other factors, illustrating the influence of different factors on median housing price and filling in the data using D3. The Predictions page uses user input to make a prediction on a hypothetical sale. All the data is stored locally to the repo on CSV’s, as well as in an SQLite database.
 
+## To see this on our Heroku app visit:
+https://oregondataviz-predicting-price.herokuapp.com/
 
+### To run this locally
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -50,14 +53,7 @@ To run this application locally use the following steps:
 
 Thanks to the following people who have contributed to this project:
 
-<<<<<<< HEAD
 * [@Bvmann] (https://github.com/bvmann) - Cleaned Data and Machine learning using Python master.
 * [@stevenbpeters] (https://github.com/stephenbpeters) - Heroku manager, merger of HTML and Flask App.
 * [@mgfogerson] (https://github.com/mgfogerson) - Interactive D3 graph Maker along with Analysis and CSS.
 * [@HollyHeredia] (https://github.com/HollyHeredia) - Cleaned Data, made SQL databases, Git merger, documentation manager.
-=======
-* [@Bvmann] (https://github.com/bvmann) - Cleaned Data and Machine     learning using Python master.
-* [@stephenbpeters] (https://github.com/stephenbpeters) - Heroku manager, merger of HTML and Flask App.
-* [@mgfogerson] (https://github.com/mgfogerson) - Interactive D3 graph Maker along with Analysis and CSS.
-* * [@HollyHeredia] (https://github.com/HollyHeredia) - Cleaned Data, made SQL databases, Git merger, documentation manager.
->>>>>>> 5014933821aed08ff5677dd4759ad9d20b64bf47
