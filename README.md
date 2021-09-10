@@ -54,6 +54,6 @@ To run this application locally use the following steps:
 Thanks to the following people who have contributed to this project:
 
 * [@Bvmann] (https://github.com/bvmann) - Cleaned Data and Machine learning using Python master.
-* [@stevenbpeters] (https://github.com/stephenbpeters) - Heroku manager, merger of HTML and Flask App.
+* [@stephenbpeters] (https://github.com/stephenbpeters) - Heroku manager, merger of HTML and Flask App.
 * [@mgfogerson] (https://github.com/mgfogerson) - Interactive D3 graph Maker along with Analysis and CSS.
 * [@HollyHeredia] (https://github.com/HollyHeredia) - Cleaned Data, made SQL databases, Git merger, documentation manager.
